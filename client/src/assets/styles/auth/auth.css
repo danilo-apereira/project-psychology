@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    margin-top: 10px;
+}
+
+.header .theme-toggler {
+    position: relative;
+    left: calc(50% - 2.1rem);
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.header .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .theme-toggler span.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.header img {
+    position: relative;
+    left: calc(50% - 2.1rem);
+    top: 8px;
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--border-radius-1);
+}
+
+form {
+    position: absolute;
+    top: 160px;
+}
+
+form .field {
+    position: relative;
+    border-bottom: 2px solid var(--color-primary);
+    margin: 36px 0;
+}
+
+form .field.error {
+    border-bottom: 2px solid var(--color-error);
+}
+
+.field input {
+    width: 100%;
+    padding: 0 8px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--color-dark);
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--color-grey);
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.field span:before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2.5px;
+    background: var(--color-primary);
+    transition: .5s;
+}
+
+.field span.error:before {
+    background: var(--color-error);
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label {
+    top: -5px;
+    color: var(--color-primary);
+}
+
+.field input.error:focus ~ label,
+.field input.error:valid ~ label {
+    color: var(--color-error);
+}
+
+input[readonly] ~ label {
+    top: -5px;
+    color: var(--color-primary);
+}
+
+.field input[readonly] ~ span::before {
+    width: 100%;
+}
+
+.field input:focus ~ span::before,
+.field input:valid ~ span::before {
+    width: 100%;
+}
+
+form .auth {
+    margin-top: -1px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+form .auth.text-muted {
+    margin-top: -10px;
+    margin-bottom: 4px;
+}
+
+.sign-link {
+    color: var(--color-primary);
+}
+
+.error-msg {
+    color: var(--color-error);
+    position: absolute;
+    top: 42px;
+}
+
+.back-icon {
+    position: absolute;
+    top: 140px;
+    right: 144px;
+    color: var(--color-primary-variant);
+    cursor: pointer;
+    width: 0;
+    font-size: 34px;
+}

@@ -5,7 +5,7 @@ function HomePage() {
     const { user: currentUser } = useSelector((state) => state.auth);
 
     if (!currentUser)
-        return <Navigate to='/auth/signin' />
+        return <Navigate to="/auth/signin" />
 
     return (
         <div>

@@ -1,0 +1,26 @@
+.btn-standard {
+    background-color: var(--color-primary);
+    border-width: 1.4px;
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: var(--border-radius-2);
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.btn-standard:hover {
+    background-color: var(--color-primary-variant);
+}
+
+.btn-standard.disabled-btn {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-style: solid;
+    background-color: var(--color-background);
+    cursor: not-allowed;
+}
